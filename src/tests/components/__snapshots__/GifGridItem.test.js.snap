@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Verifies that component <GifGridItem /> display correctly Test component <GifGridItem />  create on snapshot 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="Compment Grid Item"
+    src="https://media1.giphy.com/media/6IkjQmpaRwIabJ2G3C/giphy-downsized-medium.gif?cid=a12b0e9c0s2xapm4oybeuva6a0mh4isidbuhuapdh80g2jtv&rid=giphy-downsized-medium.gif"
+  />
+  <p>
+    Compment Grid Item
+  </p>
+</div>
+`;

@@ -13,12 +13,18 @@ export const AddCategory = ({ setCategories }) => {
         }
     }
 
+    const handleInputChange = ( evt ) => {
+        setInputValue(evt.target.value);
+        console.log('handleInputChange Inside');
+    }
+
     return (
         <form onSubmit = { handleSubmit }>
+            <p>{ inputValue }</p>
             <input 
                 type="text"
                 value={inputValue}
-                onChange={(evt) => setInputValue(evt.target.value)}
+                onChange={(evt) => handleInputChange(evt) }
             ></input>
         </form>
     )
