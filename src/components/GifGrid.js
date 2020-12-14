@@ -1,25 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useFetchGifs } from "../hooks/useFetchGifs";
-// import GifGridItem from './GifGridItem';
-// import { getGifs } from "../helpers/getGifs";
+import GifGridItem from "./GifGridItem";
+
 
 const GifGrid = ({ category }) => {
-//   const [images, setImages] = useState([]);
-//   useEffect(() => {
-//     getGifs( category )
-//     .then( imgs => setImages( imgs )  );
-//   }, [ category ]);
 
-  const { data, loading } = useFetchGifs();
+  const { data: images, loading } = useFetchGifs( category );
 
-  console.log(data, loading);
+  console.log(images, loading);
 
   return (
     <>
-    <h4>{category}</h4>
-    { loading ? 'Cargando...' : 'Data Loaded'}
-    {/* <div className="card-grid">
+    <h4 className="animate__animated animate__fadeIn">{category}</h4>
+    { loading && <p className="animate__animated animate__flash">Cargando...</p> } 
+    <div className="card-grid">
         {images.map(img  => {
           return (
             <GifGridItem  
@@ -28,7 +23,7 @@ const GifGrid = ({ category }) => {
           );
         })}
       
-    </div> */}
+    </div>
     </>
   );
 };
